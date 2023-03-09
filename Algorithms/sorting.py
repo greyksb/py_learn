@@ -19,6 +19,9 @@ tp = ((1, 2), (34, 8), (2, 17), (16, 1))
 print(sorted(tp, key=itemgetter(1)))
 print(sorted(tp, key=itemgetter(0, 1)))
 
+# можно не сортировать а находить мин макс
+print(min(tp, key=itemgetter(1)))
+
 
 # сортировка с lambda key без itemgetter (работает медленнее)
 print()
