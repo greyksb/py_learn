@@ -1,3 +1,6 @@
+import my_timemetter
+
+
 def count_even_dits(n: int) -> int:
     """
     количество четных цифр в числе
@@ -49,8 +52,14 @@ def fnd_max_prime(n :int) -> int:
             break
     return result
 
+def test_time_metter(n):
+    ip = my_timemetter.timemetter(is_prime)
+    return ip(n)
+
+
 
 if __name__ == '__main__':
     #print(is_prime(8887))
     #print(count_even_dits(102))
-    print(fnd_max_prime(1210))
+    #print(fnd_max_prime(1210))
+    print(test_time_metter(887))
