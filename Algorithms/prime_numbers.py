@@ -1,4 +1,4 @@
-import my_timemetter
+from utils import my_timemetter
 
 
 def count_even_dits(n: int) -> int:
@@ -14,6 +14,7 @@ def count_even_dits(n: int) -> int:
     return sum(x in '02468' for x in str(n))
 
 
+@my_timemetter.timemetter
 def is_prime(num: int) -> bool:
     """
     Оптимизированный алгоритм поиска простых неотрицательных чисел:
@@ -53,13 +54,11 @@ def fnd_max_prime(n :int) -> int:
     return result
 
 def test_time_metter(n):
-    ip = my_timemetter.timemetter(is_prime)
-    return ip(n)
-
+    return is_prime(n)
 
 
 if __name__ == '__main__':
-    #print(is_prime(8887))
+    print(is_prime(8887))
     #print(count_even_dits(102))
     #print(fnd_max_prime(1210))
-    print(test_time_metter(887))
+    print(test_time_metter(8878938539785593759739759))
